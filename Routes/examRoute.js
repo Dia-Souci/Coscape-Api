@@ -12,7 +12,7 @@ router.put('/reduceChances/:id',async(req,res)=>{
         if(user!==null){
             if (user.chances === 0 ){
                 try {
-                    await userModel.findByIdAndUpdate(id,{ $set: { status : 'disqualified' } }, { new: true })
+                    await userModel.findByIdAndUpdate(id,{ $set: { stateOfexams : 'disqualified' } }, { new: true })
                 } catch (error) {
                     res.status(500).json({
                         status:'Failed',
@@ -40,11 +40,10 @@ router.put('/reduceChances/:id',async(req,res)=>{
 
 
 
-router.put('/finishTests/:id',async(req,res)=>{
+router.put('/Qualify/:id',async(req,res)=>{
     try{
         const id = req.params.id
-        await userModel.findByIdAndUpdate(id,{$set : req.body,})
-        const user = await userModel.findById(id)
+        const user =await userModel.findByIdAndUpdate(id,{$set : {stateOfexams : 'qualified'}}, { new: true })
         if(user!==null){
             res.status(200).json({
                 status:"Success",

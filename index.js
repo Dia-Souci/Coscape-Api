@@ -7,6 +7,7 @@ const AuthRoute = require('./Routes/AuthRoute')
 const MemberRegRoute = require('./Routes/MemberRegistration')
 const userRoute = require('./Routes/usersRoute')
 const teamRoute = require('./Routes/teamRoute')
+const examRoute = require('./Routes/examRoute')
 
 const cors = require("cors");
 
@@ -40,6 +41,7 @@ app.use('/Api/Auth',AuthRoute);
 app.use('/Api/AddMember',MemberRegRoute);
 app.use('/Api/users',userRoute);
 app.use('/Api/teams',teamRoute);
+app.use('/Api/exams',examRoute);
 
 
 

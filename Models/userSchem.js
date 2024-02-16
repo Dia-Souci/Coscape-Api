@@ -30,9 +30,9 @@ const userSchema = new Mongoose.Schema(
         type:String,
         default:''
     },
-    status:{
+    stateOfexams:{
         type:String,
-        defaut:'pending'
+        default:'pending'
     },
     chances:{
         type : Number,
