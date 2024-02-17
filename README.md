@@ -1,8 +1,8 @@
 # Coscape-Api
-#Web Application API
+# Web Application API
 This is a Node.js and Express API for managing users and other activities.
 
-#Getting Started
+# Getting Started
 To run this API on your local machine, follow these steps:
 
 Clone this repository to your local machine:
@@ -18,18 +18,18 @@ Start the server:
 `npm start`
 The server will start running at http://localhost:5000.
 
-#Routes
-#Authentication
+# Routes
+# Authentication
 `/api/Auth` : and its sub routes
-#Users
+# Users
 `/api/users` :  and its sub routes
-#SubMembers
+# SubMembers
 `/api/AddMember`
-#Teams
+# Teams
 `/api/teams`
-#Exams
+# Exams
 `/api/exams`
-#Dependencies
+# Dependencies
 Express.js: A web application framework for Node.js.
 
 mongoose: MongoDB object modeling tool designed to work in an asynchronous environment.
